@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/adriana-perfumes/static/css/main.3e49b334.css",
+    "main.js": "/adriana-perfumes/static/js/main.15841237.js",
+    "static/js/687.db76dfbd.chunk.js": "/adriana-perfumes/static/js/687.db76dfbd.chunk.js",
+    "index.html": "/adriana-perfumes/index.html",
+    "main.3e49b334.css.map": "/adriana-perfumes/static/css/main.3e49b334.css.map",
+    "main.15841237.js.map": "/adriana-perfumes/static/js/main.15841237.js.map",
+    "687.db76dfbd.chunk.js.map": "/adriana-perfumes/static/js/687.db76dfbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e49b334.css",
+    "static/js/main.15841237.js"
+  ]
+}
