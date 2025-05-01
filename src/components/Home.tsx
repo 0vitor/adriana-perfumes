@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import logo from "../assets/logo.png";
+import divisor from "../assets/divisor.svg";
 
 function Home() {
   const [logoVisible, setLogoVisible] = useState(false);
@@ -8,67 +10,28 @@ function Home() {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#d3986b",
-      }}
-    >
+    <div className="flex flex-col justify-center items-center bg-[#d3986b]">
       <img
-        src="./logo.png"
+        src={logo}
         alt="Company Logo"
-        style={{
-          marginTop: "-50px",
-          marginBottom: "-76px",
-          height: "auto",
-          width: "330px",
-          //animacao
-          transform: logoVisible ? "translateY(0)" : "translateY(50px)",
-          opacity: logoVisible ? 1 : 0,
-          transition: "transform 1s ease, opacity 1s ease",
-        }}
+        className={`mt-[50px] mb-[-76px] h-auto w-[330px] transition-transform transition-opacity duration-1000 ease-in-out ${
+          logoVisible
+            ? "translate-y-0 opacity-100"
+            : "translate-y-[50px] opacity-0"
+        }`}
       />
-      <h1
-        style={{
-          marginTop: "0px",
-          color: "white",
-          fontFamily: "Forum, sans-serif",
-          fontSize: "98px",
-          textAlign: "center",
-          fontWeight: "200",
-          letterSpacing: "2px",
-        }}
-      >
+      <h1 className="mt-0 text-white font-forum text-[98px] text-center font-light tracking-[2px]">
         <span>Adriana</span>
         <br />
         <span>Perfumes</span>
       </h1>
-      <h2
-        style={{
-          color: "white",
-          letterSpacing: "5px",
-          fontSize: "35px",
-          fontWeight: "370",
-          transform: "scaleY(0.9)",
-          transformOrigin: "center",
-        }}
-      >
+      <h2 className="text-white tracking-[5px] text-[35px] font-[370] scale-y-[0.9] origin-center">
         ARTESANAIS
       </h2>
       <img
-        src="./divisor.svg"
+        src={divisor}
         alt="Divisor gráfico"
-        style={{
-          marginTop: "20px",
-          width: "550px",
-          paddingBottom: "20px",
-          height: "auto",
-          filter:
-            "invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)",
-        }}
+        className="mt-[20px] w-[550px] pb-[20px] h-auto filter invert"
       />
     </div>
   );

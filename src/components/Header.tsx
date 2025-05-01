@@ -9,75 +9,17 @@ function Header() {
   };
 
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        padding: "16px 20px",
-        backgroundColor: "rgb(253, 246, 238)",
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-      }}
-    >
-      <nav style={{ display: "flex", gap: "20px" }}>
-        <button
-          onClick={() => scrollToSection("inicio")}
-          style={{
-            background: "none",
-            border: "none",
-            color: "black",
-            fontSize: "16px",
-            fontStyle: "italic",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          Início
-        </button>
-        <button
-          onClick={() => scrollToSection("catalogo")}
-          style={{
-            background: "none",
-            border: "none",
-            color: "black",
-            fontSize: "16px",
-            fontStyle: "italic",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          Catálogo
-        </button>
-        <button
-          onClick={() => scrollToSection("loja-virtual")}
-          style={{
-            background: "none",
-            border: "none",
-            color: "black",
-            fontSize: "16px",
-            fontStyle: "italic",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          Loja Virtual
-        </button>
-        <button
-          onClick={() => scrollToSection("sobre-perfumes")}
-          style={{
-            background: "none",
-            border: "none",
-            color: "black",
-            fontSize: "16px",
-            fontStyle: "italic",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          Sobre Perfumes
-        </button>
+    <header className="flex justify-end items-center px-[20px] py-[16px] bg-[rgb(253,246,238)] sticky top-0 z-[1000]">
+      <nav className="flex gap-[20px]">
+        {["inicio", "catalogo", "loja-virtual", "sobre-perfumes"].map((id) => (
+          <button
+            key={id}
+            onClick={() => scrollToSection(id)}
+            className="bg-none border-none text-black text-[16px] italic font-bold cursor-pointer"
+          >
+            {id.replace("-", " ").toUpperCase()}
+          </button>
+        ))}
       </nav>
     </header>
   );

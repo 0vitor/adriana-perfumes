@@ -1,5 +1,6 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
+import background from "../assets/background.png";
 
 function VirtualStore() {
   const { AiFillInstagram, AiOutlineWhatsApp, AiFillFacebook } = AiIcons as {
@@ -7,86 +8,32 @@ function VirtualStore() {
     AiOutlineWhatsApp: React.ComponentType<{ size?: number }>;
     AiFillFacebook: React.ComponentType<{ size?: number }>;
   };
-  const color = "rgb(246, 166, 128)";
 
   return (
-    <div
-      className="VirtualStore"
-      style={{
-        position: "relative", // Add relative positioning for the pseudo-element
-        overflow: "hidden", // Ensure the pseudo-element doesn't overflow
-      }}
-    >
+    <div className="relative overflow-hidden">
       <div
-        style={{
-          color,
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: `url(${process.env.PUBLIC_URL}/background.png)`,
-          backgroundSize: "auto",
-          backgroundPosition: "center",
-          opacity: 0.22,
-          zIndex: -1,
-        }}
+        className="absolute inset-0 bg-center bg-auto opacity-25 z-[-1]"
+        style={{ backgroundImage: `url(${background})` }}
       />
-      <p
-        style={{
-          color,
-          fontSize: "30px",
-          marginBottom: "40px",
-          marginTop: "120px",
-        }}
-      >
+      <p className="text-[rgb(246,166,128)] text-[30px] mb-[40px] mt-[120px]">
         Criamos <b>perfumes</b> que <b>inspiram</b>
       </p>
-      <h1
-        style={{
-          color,
-          fontSize: "75px",
-          marginBottom: "30px",
-          fontFamily: "karma",
-          fontWeight: "500",
-        }}
-      >
+      <h1 className="text-[rgb(246,166,128)] text-[75px] mb-[30px] font-karma font-medium">
         Uma obra de arte olfativa ao seu alcance
       </h1>
       <button
-        style={{
-          borderRadius: "22px",
-          padding: "10px 40px",
-          color,
-          border: "2px solid #f6a680",
-          backgroundColor: "transparent",
-          cursor: "pointer",
-          fontSize: "22px",
-          marginBottom: "40px",
-        }}
+        className="rounded-[22px] px-[40px] py-[10px] text-[rgb(246,166,128)] border-2 border-[rgb(246,166,128)] bg-transparent cursor-pointer text-[22px] mb-[40px]"
         onClick={() => (window.location.href = "https://example.com")}
       >
         Compre agora
       </button>
-      <div
-        style={{
-          marginTop: "20px",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <div className="mt-[20px] flex justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="17.2"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 500 17.2"
-          style={{
-            width: "650px",
-            paddingBottom: "20px",
-            height: "auto",
-            fill: "#f6a680",
-          }}
+          className="w-[650px] pb-[20px] h-auto fill-[rgb(246,166,128)]"
         >
           <g>
             <g>
@@ -108,15 +55,8 @@ function VirtualStore() {
             </g>
           </g>
         </svg>
-        <div
-          style={{
-            position: "absolute",
-            right: "5%",
-            bottom: "10px",
-            display: "flex",
-          }}
-        >
-          <span style={{ color, gap: "10px", display: "flex" }}>
+        <div className="absolute right-[5%] bottom-[10px] flex">
+          <span className="text-[rgb(246,166,128)] gap-[10px] flex">
             <AiFillInstagram size={54} />
             <AiOutlineWhatsApp size={54} />
             <AiFillFacebook size={54} />

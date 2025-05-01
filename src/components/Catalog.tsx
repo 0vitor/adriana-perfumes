@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import background from "../assets/background.png";
 
 function Catalog() {
   const [titleVisible, setTitleVisible] = useState(false);
   const [tableVisible, setTableVisible] = useState(false);
 
-  const color = "rgb(200, 140, 110)";
   const femininePerfumes = [
     "212 Vip Rosé",
     "Flower By Kenzo",
@@ -33,85 +33,32 @@ function Catalog() {
   }, []);
 
   return (
-    <div
-      className="Catalog"
-      style={{
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+    <div className="relative overflow-hidden">
       <div
-        style={{
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: `url(${process.env.PUBLIC_URL}/background.png)`,
-          backgroundSize: "auto",
-          backgroundPosition: "center",
-          opacity: 0.25,
-          zIndex: -1,
-        }}
+        className="absolute inset-0 bg-center bg-auto opacity-25 z-[-1]"
+        style={{ backgroundImage: `url(${background})` }}
       />
       <h1
-        style={{
-          fontFamily: "'Magnolia Script', sans-serif",
-          lineHeight: "1.2",
-          fontSize: "60px",
-          color,
-          paddingTop: "40px",
-          fontWeight: "500",
-          //animation
-          opacity: titleVisible ? 1 : 0,
-          transform: titleVisible ? "translateY(0)" : "translateY(-20px)",
-          transition: "opacity 0.5s ease, transform 0.5s ease",
-        }}
+        className={`font-[Magnolia Script] leading-[1.2] text-[60px] text-[rgb(200,140,110)] pt-[40px] font-magnolia transition-opacity transition-transform duration-500 ease-in-out ${
+          titleVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-5"
+        }`}
       >
         <p>Catálogo de</p>
         <p>Fragrâncias</p>
       </h1>
       <table
-        style={{
-          width: "auto",
-          margin: "20px auto",
-          textAlign: "left",
-          fontSize: "18px",
-          borderCollapse: "collapse",
-          //animation
-          opacity: tableVisible ? 1 : 0,
-          transform: tableVisible ? "translateY(0)" : "translateY(20px)",
-          transition: "opacity 1s ease, transform 1s ease",
-        }}
+        className={`w-auto mx-auto my-[20px] text-left text-[18px] border-collapse transition-opacity transition-transform duration-1000 ease-in-out ${
+          tableVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        }`}
       >
         <thead>
-          <tr
-            style={{
-              backgroundColor: "rgb(211, 152, 107)",
-              fontFamily: "karma",
-            }}
-          >
-            <th
-              style={{
-                color: "white",
-                padding: "0px 20px 0px 10px",
-                transform: "scaleY(0.9)",
-                letterSpacing: "1px",
-                fontSize: "1em",
-              }}
-            >
+          <tr className="bg-[rgb(211,152,107)] font-karma">
+            <th className="text-white px-[10px] py-0 scale-y-[0.9] tracking-[1px] text-[1em]">
               FEMININOS
             </th>
-            <th
-              style={{
-                color: "white",
-                padding: "5px 20px 5px 10px",
-                transform: "scaleY(0.9)",
-                letterSpacing: "1px",
-                fontSize: "20px",
-              }}
-            >
+            <th className="text-white px-[10px] py-[5px] scale-y-[0.9] tracking-[1px] text-[20px]">
               MASCULINOS
             </th>
           </tr>
@@ -120,31 +67,15 @@ function Catalog() {
           {femininePerfumes.map((feminine, index) => {
             const backgroundColor =
               index % 2 === 0
-                ? "rgb(255, 255, 255, 0.09)"
-                : "rgb(200, 140, 110, 0.09)";
+                ? "bg-[rgba(255,255,255,0.09)]"
+                : "bg-[rgba(200,140,110,0.09)]";
 
             return (
-              <tr
-                key={index}
-                style={{
-                  color,
-                  fontSize: "20px",
-                }}
-              >
-                <td
-                  style={{
-                    padding: "5px 70px 5px 10px",
-                    backgroundColor,
-                  }}
-                >
+              <tr key={index} className={`text-[rgb(200,140,110)] text-[20px]`}>
+                <td className={`px-[10px] py-[5px] ${backgroundColor}`}>
                   {feminine}
                 </td>
-                <td
-                  style={{
-                    padding: "10px",
-                    backgroundColor,
-                  }}
-                >
+                <td className={`px-[10px] py-[5px] ${backgroundColor}`}>
                   {masculinePerfumes[index] || ""}
                 </td>
               </tr>
