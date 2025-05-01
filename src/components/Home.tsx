@@ -18,7 +18,7 @@ function Home() {
       }}
     >
       <img
-        src="https://adrianaparfumes.my.canva.site/adriana-perfumes/_assets/media/ed9f925870800b61dcbfe59fa36dd617.png"
+        src="./logo.png"
         alt="Company Logo"
         style={{
           marginTop: "-50px",
@@ -59,7 +59,7 @@ function Home() {
         ARTESANAIS
       </h2>
       <img
-        src="/divisor.svg"
+        src="./divisor.svg"
         alt="Divisor gráfico"
         style={{
           marginTop: "20px",

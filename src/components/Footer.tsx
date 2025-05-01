@@ -16,7 +16,7 @@ function Footer() {
       }}
     >
       <img
-        src="/divisor.svg"
+        src="./divisor.svg"
         alt="Divisor gráfico"
         style={{
           marginTop: "20px",

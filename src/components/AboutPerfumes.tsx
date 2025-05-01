@@ -3,14 +3,14 @@ import React from "react";
 function AboutPerfumes() {
   const imageSize = "200px";
   const products = [
-    { src: "/perfume.png", label1: "Perfumes", label2: "Artesanais" },
-    { src: "/hidratante.png", label1: "Cremes", label2: "Hidratantes" },
+    { src: "./perfume.png", label1: "Perfumes", label2: "Artesanais" },
+    { src: "./hidratante.png", label1: "Cremes", label2: "Hidratantes" },
     {
-      src: "/aromatizantes.jpg",
+      src: "./aromatizantes.jpg",
       label1: "Aromatizantes",
       label2: "de Ambiente",
     },
-    { src: "/kitPresente.jpg", label1: "Kit", label2: "Presente" },
+    { src: "./kitPresente.jpg", label1: "Kit", label2: "Presente" },
   ];
 
   const imageContainerStyle = {
@@ -50,7 +50,7 @@ function AboutPerfumes() {
       >
         <div style={{ flex: 1, textAlign: "center" }}>
           <img
-            src="/perfume.png"
+            src="./perfume.png"
             alt="Perfume"
             style={{ maxWidth: "100%", height: "auto", borderRadius: "10px" }}
           />
