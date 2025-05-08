@@ -14,17 +14,17 @@ function AboutPerfumes() {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-between bg-[rgb(253,246,238)] p-5 lg:p-10">
-        <div className="flex-1 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center bg-[rgb(253,246,238)] p-5 lg:p-10 gap-5">
+        <div className="flex-1 max-w-[560px]">
           <img
             src={perfume}
             alt="Perfume"
-            className="max-w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg"
           />
         </div>
-        <div className="flex-1 text-[rgb(200,140,110)] text-lg lg:text-xl font-questrial leading-relaxed lg:ml-5">
-          <h1 className="text-[73px] font-light mb-5">Sobre os Perfumes</h1>
-          <p className="text-[31px] italic font-open-sans mb-5">
+        <div className="flex-1 w-full max-w-[650px] text-[rgb(200,140,110)] text-lg lg:text-xl font-questrial leading-relaxed">
+          <h1 className="text-[73px] font-light mb-10">Sobre os Perfumes</h1>
+          <p className="text-[30px] italic font-open-sans mb-5 leading-tight">
             Mais do que uma simples fragrância; é uma experiência sensorial
             única e personalizada.
           </p>

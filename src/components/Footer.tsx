@@ -12,15 +12,15 @@ function Footer() {
       <img
         src={divisor}
         alt="Divisor gráfico"
-        className="mt-[20px] w-[550px] pb-[20px] h-auto filter invert"
+        className="pt-[20px] w-[550px] pb-[20px] h-auto filter invert mx-auto"
       />
-      <h2 className="text-[100px] font-light mb-[18px] font-forum">
+      <h2 className="text-[100px] font-light font-forum">
         Obrigada pela visita!
       </h2>
-      <p className="text-[30px] font-light font-assistant tracking-[2px]">
+      <p className="text-[30px] font-light font-assistant tracking-[6px]">
         CONFIRA NOSSO INSTAGRAM PARA
       </p>
-      <p className="text-[30px] font-light font-assistant tracking-[2px]">
+      <p className="text-[30px] font-light font-assistant tracking-[6px]">
         PROMOÇÕES ESPECIAIS
       </p>
       <span className="text-white gap-[10px] flex justify-center">
