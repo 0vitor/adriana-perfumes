@@ -14,17 +14,19 @@ function AboutPerfumes() {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-center bg-[rgb(253,246,238)] p-5 lg:p-10 gap-5">
-        <div className="flex-1 max-w-[560px]">
+      <div className="flex flex-col lg:flex-row items-center justify-center bg-[rgb(253,246,238)] p-4 sm:p-5 lg:p-10 gap-4 sm:gap-5">
+        <div className="flex-1 max-w-[300px] sm:max-w-[560px]">
           <img
             src={perfume}
             alt="Perfume"
             className="w-full h-auto rounded-lg"
           />
         </div>
-        <div className="flex-1 w-full max-w-[650px] text-[rgb(200,140,110)] text-lg lg:text-xl font-questrial leading-relaxed">
-          <h1 className="text-[73px] font-light mb-10">Sobre os Perfumes</h1>
-          <p className="text-[30px] italic font-open-sans mb-5 leading-tight">
+        <div className="flex-1 w-full max-w-[400px] sm:max-w-[650px] text-[rgb(200,140,110)] font-questrial leading-relaxed text-[16px] sm:text-[20px] md:text-[18px]">
+          <h1 className="font-light mb-5 sm:mb-10 text-[40px] sm:text-[64px] md:text-[73px]">
+            Sobre os Perfumes
+          </h1>
+          <p className="italic font-open-sans mb-3 sm:mb-5 leading-tight text-[20px] sm:text-[32px] md:text-[30px]">
             Mais do que uma simples fragrância; é uma experiência sensorial
             única e personalizada.
           </p>
@@ -59,21 +61,22 @@ function AboutPerfumes() {
           </p>
         </div>
       </div>
-      <div className="text-center bg-[rgb(253,246,238)] pt-10">
-        <h2 className="text-[68px] font-light font-gfs text-[rgb(200,140,110)]">
+
+      <div className="text-center bg-[rgb(253,246,238)] pt-5 sm:pt-10">
+        <h2 className="font-light font-gfs text-[40px] sm:text-[60px] md:text-[68px] text-[rgb(200,140,110)]">
           Nossos produtos
         </h2>
-        <div className="flex flex-wrap justify-center gap-5 mt-10">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mt-5 sm:mt-10">
           {products.map((product, index) => (
             <div key={index} className="text-center">
               <div className="border-4 border-[rgb(200,140,110)] rounded-lg p-2">
                 <img
                   src={product.src}
                   alt={`${product.label1} ${product.label2}`}
-                  className="w-[200px] h-[200px] object-cover rounded-md"
+                  className="w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] object-cover rounded-md"
                 />
               </div>
-              <p className="mt-2 font-open-sans text-lg font-semibold text-[rgb(200,140,110)]">
+              <p className="mt-2 font-open-sans font-semibold text-[rgb(200,140,110)] text-[18px] sm:text-[26px] md:text-[20px]">
                 {product.label1}
                 <br />
                 {product.label2}
@@ -82,9 +85,10 @@ function AboutPerfumes() {
           ))}
         </div>
       </div>
-      <div className="text-center bg-[rgb(253,246,238)] py-10">
+
+      <div className="text-center bg-[rgb(253,246,238)] py-5 sm:py-10">
         <button
-          className="mt-5 rounded-[22px] px-10 py-2 text-[rgb(200,140,110)] border-2 border-[rgb(200,140,110)] bg-transparent text-lg cursor-pointer"
+          className="mt-3 sm:mt-5 rounded-[22px] px-6 sm:px-10 py-2 border-2 border-[rgb(200,140,110)] bg-transparent text-[rgb(200,140,110)] font-semibold text-[18px] sm:text-[24px] md:text-[20px] cursor-pointer"
           onClick={() => (window.location.href = "https://example.com")}
         >
           Compre agora

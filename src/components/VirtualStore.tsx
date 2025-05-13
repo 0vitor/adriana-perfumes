@@ -10,19 +10,19 @@ function VirtualStore() {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden px-4 sm:px-8">
       <div
         className="absolute inset-0 bg-center bg-auto opacity-25 z-[-1]"
         style={{ backgroundImage: `url(${background})` }}
       />
-      <p className="text-[rgb(246,166,128)] text-[30px] mb-[40px] mt-[120px]">
+      <p className="text-[rgb(246,166,128)] text-[24px] sm:text-[30px] mb-[20px] sm:mb-[40px] mt-[80px] sm:mt-[120px]">
         Criamos <b>perfumes</b> que <b>inspiram</b>
       </p>
-      <h1 className="text-[rgb(246,166,128)] text-[75px] mb-[30px] font-karma font-medium">
+      <h1 className="text-[rgb(246,166,128)] text-[50px] sm:text-[75px] mb-[20px] sm:mb-[30px] font-karma font-medium">
         Uma obra de arte olfativa ao seu alcance
       </h1>
       <button
-        className="rounded-[22px] px-[40px] py-[10px] text-[rgb(246,166,128)] border-2 border-[rgb(246,166,128)] bg-transparent cursor-pointer text-[22px] mb-[40px]"
+        className="rounded-[22px] px-[20px] sm:px-[40px] py-[10px] text-[rgb(246,166,128)] border-2 border-[rgb(246,166,128)] bg-transparent cursor-pointer text-[18px] sm:text-[22px] mb-[20px] sm:mb-[40px]"
         onClick={() => (window.location.href = "https://example.com")}
       >
         Compre agora
@@ -33,7 +33,7 @@ function VirtualStore() {
           height="17.2"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 500 17.2"
-          className="w-[650px] pb-[20px] h-auto fill-[rgb(246,166,128)]"
+          className="w-[300px] sm:w-[650px] pb-[20px] h-auto fill-[rgb(246,166,128)]"
         >
           <g>
             <g>

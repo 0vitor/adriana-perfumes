@@ -10,7 +10,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-[#d3986b] px-4 sm:px-8">
+    <div className="flex flex-col justify-center items-center bg-[#d3986b] sm:px-8 h-[70vh]">
       <img
         src={logo}
         alt="Company Logo"
@@ -20,16 +20,16 @@ function Home() {
               ? "translate-y-0 opacity-100"
               : "translate-y-[50px] opacity-0"
           }
-          mt-[-20px] sm:mt-[-30px] md:mt-[-40px]
-          mb-[-40px] sm:mb-[-60px] md:mb-[-76px]
-          w-[260px] sm:w-[320px] md:w-[330px]
+          mt-[-10px] sm:mt-[-20px] md:mt-[-40px]
+          mb-[-20px] sm:mb-[-40px] md:mb-[-76px]
+          w-[200px] sm:w-[320px] md:w-[930px] lg:w-[330px] xl:w-[330px]
           h-auto
         `}
       />
       <h1
         className="
           text-white font-forum font-light text-center tracking-[1px] leading-[1]
-          text-[64px] sm:text-[84px] md:text-[98px]
+          text-[48px] sm:text-[84px] md:text-[98px]
         "
       >
         <span>Adriana</span>
@@ -38,8 +38,8 @@ function Home() {
       </h1>
       <h2
         className="
-          text-white font-[370] scale-y-[0.9] origin-center tracking-[3px]
-          text-[24px] sm:text-[30px] md:text-[35px]
+          text-white font-[370] scale-y-[0.9] origin-center tracking-[2px]
+          text-[20px] sm:text-[30px] md:text-[35px]
         "
       >
         ARTESANAIS
@@ -48,8 +48,8 @@ function Home() {
         src={divisor}
         alt="Divisor gráfico"
         className="
-          mt-[20px] pb-[20px] filter invert h-auto
-          w-[300px] sm:w-[450px] md:w-[550px]
+          mt-[10px] sm:mt-[20px] pb-[10px] sm:pb-[20px] filter invert h-auto
+          w-[200px] sm:w-[450px] md:w-[550px]
         "
       />
     </div>

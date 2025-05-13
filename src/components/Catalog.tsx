@@ -33,13 +33,13 @@ function Catalog() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden px-4 sm:px-8">
       <div
         className="absolute inset-0 bg-center bg-auto opacity-25 z-[-1]"
         style={{ backgroundImage: `url(${background})` }}
       />
       <h1
-        className={`font-[Magnolia Script] leading-[1.2] text-[60px] text-[rgb(200,140,110)] pt-[40px] font-magnolia transition-opacity transition-transform duration-500 ease-in-out ${
+        className={`font-[Magnolia Script] leading-[1.2] text-[40px] sm:text-[60px] text-[rgb(200,140,110)] pt-[20px] sm:pt-[40px] font-magnolia transition-opacity transition-transform duration-500 ease-in-out ${
           titleVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-5"
@@ -49,7 +49,7 @@ function Catalog() {
         <p>Fragrâncias</p>
       </h1>
       <table
-        className={`w-auto mx-auto my-[20px] text-left text-[18px] border-collapse transition-opacity transition-transform duration-1000 ease-in-out ${
+        className={`w-full sm:w-auto mx-auto my-[10px] sm:my-[20px] text-left text-[14px] sm:text-[18px] border-collapse transition-opacity transition-transform duration-1000 ease-in-out ${
           tableVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
