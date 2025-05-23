@@ -20,16 +20,16 @@ function Home() {
               ? "translate-y-0 opacity-100"
               : "translate-y-[50px] opacity-0"
           }
-          mt-[-10px] sm:mt-[-20px] md:mt-[-40px]
-          mb-[-20px] sm:mb-[-40px] md:mb-[-76px]
-          w-[200px] sm:w-[320px] md:w-[930px] lg:w-[330px] xl:w-[330px]
+          mt-[-40px] sm:mt-[-40px]
+          mb-[-50px] sm:mb-[-40px]
+          w-[350px] sm:w-[420px]
           h-auto
         `}
       />
       <h1
         className="
           text-white font-forum font-light text-center tracking-[1px] leading-[1]
-          text-[48px] sm:text-[84px] md:text-[98px]
+          text-[68px] sm:text-[84px] md:text-[98px]
         "
       >
         <span>Adriana</span>
@@ -39,7 +39,7 @@ function Home() {
       <h2
         className="
           text-white font-[370] scale-y-[0.9] origin-center tracking-[2px]
-          text-[20px] sm:text-[30px] md:text-[35px]
+          text-[24px] sm:text-[30px] md:text-[35px]
         "
       >
         ARTESANAIS
@@ -48,8 +48,8 @@ function Home() {
         src={divisor}
         alt="Divisor gráfico"
         className="
-          mt-[10px] sm:mt-[20px] pb-[10px] sm:pb-[20px] filter invert h-auto
-          w-[200px] sm:w-[450px] md:w-[550px]
+          mt-[10px] sm:mt-[40px] pb-[10px] sm:pb-[20px] filter invert h-auto
+          w-[350px] sm:w-[450px] md:w-[550px]
         "
       />
     </div>

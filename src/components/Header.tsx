@@ -3,8 +3,14 @@ import React from "react";
 function Header() {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    const header = document.querySelector("header");
+    if (section && header) {
+      const headerHeight = header.offsetHeight;
+      const sectionPosition = section.offsetTop;
+      window.scrollTo({
+        top: sectionPosition - headerHeight,
+        behavior: "smooth",
+      });
     }
   };
 

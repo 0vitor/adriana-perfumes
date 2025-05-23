@@ -23,7 +23,7 @@ function AboutPerfumes() {
           />
         </div>
         <div className="flex-1 w-full max-w-[400px] sm:max-w-[650px] text-[rgb(200,140,110)] font-questrial leading-relaxed text-[16px] sm:text-[20px] md:text-[18px]">
-          <h1 className="font-light mb-5 sm:mb-10 text-[40px] sm:text-[64px] md:text-[73px]">
+          <h1 className="font-light mb-5 text-[40px] sm:text-[64px] md:text-[73px]">
             Sobre os Perfumes
           </h1>
           <p className="italic font-open-sans mb-3 sm:mb-5 leading-tight text-[20px] sm:text-[32px] md:text-[30px]">
